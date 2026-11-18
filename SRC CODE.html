@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nanotechnology in Healthcare & Energy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f4f7fa; color: #1e293b; }
+
+    header { background: #0f172a; color: #fff; text-align: center; padding: 1.5rem 1rem; }
+    .badge { display: inline-block; margin-top: 0.5rem; padding: 0.25rem 0.75rem; background: #0284c7; border-radius: 12px; font-size: 0.85rem; }
+
+    nav { display: flex; justify-content: center; gap: 1rem; background: #1e293b; padding: 0.75rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+
+    .container { display: flex; flex-wrap: wrap; gap: 1rem; max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+    .card { background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex: 1 1 calc(33.33% - 1rem); }
+    .card img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.75rem; }
+    .card h2 { font-size: 1.2rem; margin-bottom: 0.4rem; color: #0284c7; }
+    .card p { font-size: 0.9rem; margin-bottom: 1rem; }
+    .btn { background: #0284c7; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+
+    footer { text-align: center; padding: 1rem; background: #0f172a; color: #cbd5e1; font-size: 0.85rem; }
+
+    /* Tablet: 2 columns & smaller font */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.4rem; }
+      .card { flex: 1 1 calc(50% - 1rem); }
+      .card p { font-size: 0.85rem; }
+    }
+
+    /* Mobile: 1 column, vertical nav & full-width buttons */
+    @media (max-width: 480px) {
+      nav { flex-direction: column; align-items: center; }
+      .card { flex: 1 1 100%; }
+      .btn { width: 100%; }
+    }
+
+    /* Landscape orientation */
+    @media (orientation: landscape) and (max-height: 500px) {
+      .card img { height: 110px; }
+    }
+
+    /* Print: hide nav & buttons */
+    @media print {
+      nav, .btn, .badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nanotechnology: Healthcare &amp; Energy</h1>
+    <div class="badge">Width: <span id="width-display">0</span>px</div>
+  </header>
+
+  <nav>
+    <a href="#health">Nanomedicine</a>
+    <a href="#solar">Nano-Solar</a>
+    <a href="#storage">Nanobatteries</a>
+  </nav>
+
+  <main class="container">
+    <div class="card" id="health">
+      <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=500&q=80" alt="Nanomedicine">
+      <h2>Targeted Drug Delivery</h2>
+      <p>Nanoparticles deliver medicine directly to diseased cells, improving treatment accuracy and reducing side effects.</p>
+      <button class="btn">Learn More</button>
+    </div>
+
+    <div class="card" id="solar">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=80" alt="Quantum Dot Solar">
+      <h2>Quantum Dot Solar Cells</h2>
+      <p>Nanocrystal semiconductors capture wider light wavelengths to boost solar panel energy conversion efficiency.</p>
+      <button class="btn">Learn More</button>
+    </div>
+
+    <div class="card" id="storage">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" alt="Graphene Storage">
+      <h2>Graphene Biosensors &amp; Storage</h2>
+      <p>Carbon nanomaterials power fast-charging batteries and rapid point-of-care diagnostic sensors.</p>
+      <button class="btn">Learn More</button>
+    </div>
+  </main>
+
+  <footer>Practicum No. 8 | URK26CS1188</footer>
+
+  <script>
+    const el = document.getElementById("width-display");
+    const update = () => el.innerText = window.innerWidth;
+    update();
+    window.addEventListener("resize", update);
+  </script>
+</body>
+</html>
